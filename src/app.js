@@ -6,6 +6,8 @@ import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import authRoutes from '#routes/auth.routes.js';
+import securityMiddleware from '#middleware/security.middleware.js';
+
 
 const app = express();
 
@@ -17,6 +19,7 @@ app.use(
   morgan('combined', { stream: { write: msg => logger.info(msg.trim()) } })
 );
 app.use(cookieParser());
+app.use(securityMiddleware);
 
 app.get('/', (req, res) => {
   logger.info('Hello from Acquisitions!');
