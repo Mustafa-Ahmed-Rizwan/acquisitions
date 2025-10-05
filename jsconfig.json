@@ -9,7 +9,7 @@
       "#middlewares/*": ["middlewares/*"],
       "#utils/*": ["utils/*"],
       "#services/*": ["services/*"],
-      "#validations/*": ["validations/*"]
+      "#validations/*": ["validations/*"],
     }
   },
   "include": ["src"]
